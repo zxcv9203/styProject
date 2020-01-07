@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	
+	<script>
+		
+		
+	</script>
+	<style>
+		body{
+			margin:0;
+		}
+		h1{
+			border-bottom:2px solid black;
+			text-align: center;
+			font-size: 50px;
+			padding : 30px;
+			margin : 0;			
+		}
+		a {		
+			color: black;		
+			text-decoration: none;
+		}
+		ol{
+			
+			border-right : 2px solid black;
+			border-bottom : 2px solid black;
+			width : 100px;
+			height : 950px;
+			margin : 0px;
+			padding : 20px;
+		}
+		#grid{		
+			display:grid;
+			grid-template-columns: 150px 1fr;
+		}
+		@media(max-width:800px){
+	      #grid{
+	        display: block;
+	        
+	      }
+	      ol{
+	        border-right:none;
+	        border-bottom:none;
+	      }
+	      h1 {
+	        border-bottom:none;
+	      }
+    }
+		
+		
+	</style>
 </head>
 <body>
+	<input id = "bw" type = "button" value = "black mode" onclick = "
+	var sel_body = document.querySelector('body');
+	var sel_ol = document.querySelector('ol');
+		if(this.value === 'black mode'){
+			sel_body.style.backgroundColor = 'black';
+			sel_body.style.color = 'white';
+			var ch_a = document.querySelectorAll('a');
+			for(i = 0; i < ch_a.length; i++){
+				ch_a[i].style.color = 'white';
+			}
+			sel_ol.style.borderBottom = '2px solid white' ;
+			sel_ol.style.borderRight = '2px solid white' ;
+			document.querySelector('h1').style.borderBottom = '2px solid white';
+			this.value = 'white mode';
+		}		
+		else{
+			sel_body.style.backgroundColor = 'white' ;
+			sel_body.style.color = 'black';
+			var ch_a = document.querySelectorAll('a');
+			for(i = 0; i < ch_a.length; i++){
+				ch_a[i].style.color = 'black';
+			}
+			sel_ol.style.borderBottom = '2px solid black' ;
+			sel_ol.style.borderRight = '2px solid black' ;
+			document.querySelector('h1').style.borderBottom = '2px solid black';
+			this.value = 'black mode';
+		}
+		">
+	<h1><a href = "NewFile.html" title="Home">WEB</a></h1>
 
-<h1 align="center"><a href = "NewFile.html">WEB</a></h1>
-
-<ol>
-	<li><a href = "1.html">HTML</a></li>
-	<li><a href = "2.html">CSS</a></li>
-	<li><a href = "3.html">JavaScript</a></li>	
-</ol>
+	<div id = grid>
+	<ol>
+		<li><a href = "1.html">HTML</a></li>
+		<li><a href = "2.html">CSS</a></li>
+		<li><a href = "3.html">JavaScript</a></li>	
+	</ol>
+	<p>이름을 입력하세요 <br>
+	<input type = "text" onkeydown="alert('변경완료')"> 
+	<input type = "button" value="입력" onclick="alert('입력완료')">
+	
+	</p>
+	</div>	
+	
+	
 
 </body>
 </html>
