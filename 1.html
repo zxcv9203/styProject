@@ -3,15 +3,61 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+	
+</script>
+
+
+
+
+<script src=color.js> </script>
+<style>
+body {
+	margin: 0;
+}
+
+h1 {
+	border-bottom: 2px solid black;
+	text-align: center;
+	font-size: 50px;
+	padding: 30px;
+	margin: 0;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+ol {
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	width: 100px;
+	height: 950px;
+	margin: 0px;
+	padding: 20px;
+}
+
+#grid {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+}
+</style>
 </head>
 <body>
-<h1 align="center"><a href = "Web.html">WEB-HTML</a></h1>
+	<input id="bw" type="button" value="black mode" onclick=ch_mode(this)>
+	<h1>
+		<a href="Web.html" title="Home">WEB</a>
+	</h1>
+	<div id=grid>
+		<ol>
+			<li><a href="1.html" class="saw">HTML</a></li>
+			<li><a href="2.html" class="saw" id="active">CSS</a></li>
+			<li><a href="3.html">JavaScript</a></li>
+		</ol>
+		<p>Hello HTML</p>
+	</div>
 
-<ol>
-	<li><a href = "1.html">HTML</a></li>
-	<li><a href = "2.html">CSS</a></li>
-	<li><a href = "3.html">JavaScript</a></li>	
-</ol>
-Hello HTML
 </body>
 </html>

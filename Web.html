@@ -3,12 +3,10 @@
 <head>
 	<meta charset="EUC-KR">
 	<title>Insert title here</title>
-	
-	<script>
-		
-		
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src = "color.js"></script>
 	<style>
+	
 		body{
 			margin:0;
 		}
@@ -36,7 +34,8 @@
 			display:grid;
 			grid-template-columns: 150px 1fr;
 		}
-		@media(max-width:800px){
+		
+	/*	@media(max-width:800px){ 
 	      #grid{
 	        display: block;
 	        
@@ -48,41 +47,15 @@
 	      h1 {
 	        border-bottom:none;
 	      }
+	      */
     }
 		
 		
 	</style>
 </head>
 <body>
-	<input id = "bw" type = "button" value = "black mode" onclick = "
-	var sel_body = document.querySelector('body');
-	var sel_ol = document.querySelector('ol');
-		if(this.value === 'black mode'){
-			sel_body.style.backgroundColor = 'black';
-			sel_body.style.color = 'white';
-			var ch_a = document.querySelectorAll('a');
-			for(i = 0; i < ch_a.length; i++){
-				ch_a[i].style.color = 'white';
-			}
-			sel_ol.style.borderBottom = '2px solid white' ;
-			sel_ol.style.borderRight = '2px solid white' ;
-			document.querySelector('h1').style.borderBottom = '2px solid white';
-			this.value = 'white mode';
-		}		
-		else{
-			sel_body.style.backgroundColor = 'white' ;
-			sel_body.style.color = 'black';
-			var ch_a = document.querySelectorAll('a');
-			for(i = 0; i < ch_a.length; i++){
-				ch_a[i].style.color = 'black';
-			}
-			sel_ol.style.borderBottom = '2px solid black' ;
-			sel_ol.style.borderRight = '2px solid black' ;
-			document.querySelector('h1').style.borderBottom = '2px solid black';
-			this.value = 'black mode';
-		}
-		">
-	<h1><a href = "NewFile.html" title="Home">WEB</a></h1>
+	<input id = "bw" type = "button" value = "black mode" onclick = ch_mode(this)>
+	<h1><a href = "Web.html" title="Home">WEB</a></h1>
 
 	<div id = grid>
 	<ol>
