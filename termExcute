@@ -1,0 +1,8 @@
+on run {input, parameters}
+    tell application "Terminal"
+        if it is running then
+            do script ""
+        end if
+        activate
+    end tell
+end run
